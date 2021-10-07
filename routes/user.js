@@ -14,4 +14,4 @@ function get(request, response) {
     response.send(`<ul>${userList.join("")}</ul>`);
   });
 }
-module.exports = { getUsers };
+module.exports = { get};
