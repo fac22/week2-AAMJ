@@ -33,9 +33,9 @@ _Note: **-** is partially done_
 - A way for users to rate books and recommend them to each other.
 
 ### Project board
+![ ](project_board.png)
 
-![Group project board](project_board.PNG)
 
 ### Database
 
-![Database schema](database.PNG)
+![ ](database.png)
