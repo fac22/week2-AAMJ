@@ -5,6 +5,8 @@ const user = require("./routes/user.js");
 
 const server = express();
 
+server.use(express.static("./public"));
+
 server.get("/", books.get);
 server.get("/users/add", addBook.get);
 server.post("/users/add", addBook.post);
