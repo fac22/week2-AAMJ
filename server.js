@@ -1,10 +1,14 @@
+"user strict";
+
 const express = require("express");
+const home = require("./routes/home.js");
+const createUser = require("./routes/createUser.js");
+const deleteUser = require("./routes/deleteBook.js");
+const books = require("./routes/books.js");
 
 const server = express();
 
-server.get("/", (request, response) => {
-  response.send("hello Ji and Adriana 🥳");
-});
+server.get("/", home.get);
 
 const PORT = process.env.PORT || 3000;
 
