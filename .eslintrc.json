@@ -1,15 +1,20 @@
 {
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es2021": true
-    },
-    "extends": [
-        "airbnb-base"
-    ],
-    "parserOptions": {
-        "ecmaVersion": 12
-    },
-    "rules": {
-    }
+  "extends": [
+    "airbnb-base/legacy",
+    "prettier",
+    "plugin:node/recommended",
+    "plugin:cypress/recommended"
+  ],
+  "plugins": ["prettier", "html", "css-modules"],
+
+  "rules": {
+    "no-restricted-globals": ["error", "event", "fdescribe"],
+    "prettier/prettier": ["off", { "singleQuote": true }],
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "func-names": "off",
+    "no-process-exit": "off",
+    "object-shorthand": "off",
+    "class-methods-use-this": "off"
+  }
 }
