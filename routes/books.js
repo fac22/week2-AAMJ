@@ -1,7 +1,6 @@
 const { getBooks } = require("../database/model.js");
 
 function get(request, response) {
-
   getBooks().then((books) => {
     const bookItems = books.map((book) => {
       return /*html*/ `
