@@ -1,12 +1,9 @@
-"user strict";
-
-const express = require("express");
-const home = require("./routes/home.js");
+const express = require('express');
+const books = require('./routes/books.js');
 
 const server = express();
 
-server.get("/", home.htmlImport);
-hello!
+server.get('/', books.get);
 
 const PORT = process.env.PORT || 3000;
 

@@ -1,16 +1,19 @@
-const { getPosts } = require("../database/model.js");
+const { getBooks } = require("../database/model.js");
 
 function get(request, response) {
-  getPosts().then((posts) => {
-    const postItems = posts.map((post) => {
+
+  getBooks().then((books) => {
+    const bookItems = books.map((book) => {
       return /*html*/ `
         <li>
-        <p>${post.text_content}</p>
-        <p>${post.username}</p>
+        <p>${book.title}</p>
+        <p>${book.author}</p>
+        <p>${book.genres}</p>
+        <p>${book.description}</p>
         </li>
       `;
     });
-    response.send(`<ul>${postItems.join("")}</ul>`);
+    response.send(`<ul>${bookItems.join("")}</ul>`);
   });
 }
 

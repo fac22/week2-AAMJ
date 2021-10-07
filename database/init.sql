@@ -1,6 +1,5 @@
 BEGIN;
 
-DROP TABLE IF EXISTS users, books, users_books CASCADE;
 
  CREATE TABLE users (
   username TEXT PRIMARY KEY,
