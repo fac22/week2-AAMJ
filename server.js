@@ -6,6 +6,7 @@ const home = require("./routes/home.js");
 const server = express();
 
 server.get("/", home.htmlImport);
+hello!
 
 const PORT = process.env.PORT || 3000;
 
