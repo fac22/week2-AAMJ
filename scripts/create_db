@@ -3,11 +3,11 @@
 # stop script when an error occurs
 set -e
 
-psql -q -c "CREATE USER learn_pg_user SUPERUSER PASSWORD 'pass123'"
-echo "Created Postgres user 'learn_pg_user'"
+psql -q -c "CREATE USER books_user SUPERUSER PASSWORD 'pass123'"
+echo "Created Postgres user 'books_user'"
 
-psql -q -c "CREATE DATABASE learn_pg WITH OWNER learn_pg_user"
-echo "Created Postgres database 'learn_pg'"
+psql -q -c "CREATE DATABASE books WITH OWNER books_user"
+echo "Created Postgres database 'books'"
 
-cp example.env .env
+cp .env
 echo "Created .env containing DATABASE_URL"
