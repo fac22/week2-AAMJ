@@ -4,14 +4,29 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon -r dotenv/config server.js"
+    "dev": "nodemon -r dotenv/config server.js",
+    "test": "cypress open"
   },
   "dependencies": {
     "express": "^4.17.1",
     "pg": "^8.7.1"
   },
   "devDependencies": {
+    "cypress": "^8.5.0",
     "dotenv": "^10.0.0",
     "nodemon": "^2.0.13"
-  }
+  },
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac22/week2-AAMJ.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac22/week2-AAMJ/issues"
+  },
+  "homepage": "https://github.com/fac22/week2-AAMJ#readme",
+  "description": ""
 }
