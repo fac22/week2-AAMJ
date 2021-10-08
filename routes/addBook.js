@@ -146,7 +146,7 @@ function get(request, response) {
           name="desc"
           maxlength="100"
           rows="3"
-          placeholder="Book description in 100 characters or less"
+          placeholder="100 characters or less"
           required
         ></textarea>
         </div>
