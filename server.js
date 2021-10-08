@@ -7,9 +7,13 @@ const server = express();
 
 server.use(express.static("./public"));
 
+const bodyHandler = express.urlencoded({ extended: false });
+
+server.use(bodyHandler);
+
 server.get("/", books.get);
 server.get("/users/add", addBook.get);
-server.post("/users/add", addBook.post);
+server.post("/users/add", bodyHandler, addBook.post);
 server.get("/user", user.get);
 
 const PORT = process.env.PORT || 3000;
