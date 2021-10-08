@@ -1,5 +1,6 @@
-const { createUser } = require("../database/model.js");
+const { addBook } = require("../database/model.js");
 const db = require("../database/connection.js");
+
 
 function get(request, response) {
   const html = /*html*/ `
@@ -102,7 +103,6 @@ function get(request, response) {
         <button
           id="submit-details"
           name="submit-details"
-          aria-label="Submit your details"
         >
           Send
         </button>
@@ -167,7 +167,7 @@ function get(request, response) {
           <button
             id="submit-details"
             name="submit-details"
-            aria-label="Submit your details"
+            
           >
           Send
         </button>
@@ -181,20 +181,10 @@ function get(request, response) {
 
   response.send(html);
 }
-
 function post(request, response) {
-  const add_book = `
-  INSERT INTO books(title, author, genres, description) VALUES($1, $2)
-  `;
-  const values = [
-    request.body.book_name,
-    request.body.author,
-    request.body.desc,
-    request.body.genre,
-  ];
-  db.query(add_book, values).then(() => response.redirect("/"));
-  // createUser(request.body).then(() => {
-  //   response.redirect("/");
+  addBook(request.body).then(() => {
+    response.redirect("/");
+  });
 }
 
 module.exports = { get, post };
